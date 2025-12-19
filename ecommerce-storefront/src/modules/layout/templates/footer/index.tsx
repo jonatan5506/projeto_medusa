@@ -152,7 +152,7 @@ export default async function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex w-full mb-16 flex-col items-center justify-center text-ui-fg-muted gap-y-2">
+        <div className="flex w-full mb-2 flex-col items-center justify-center text-ui-fg-muted gap-y-2">
           <Text className="txt-compact-small">
             © {new Date().getFullYear()} Argus
             <span className="text-blue-600">Tech</span>. Todos os direitos
