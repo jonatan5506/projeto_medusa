@@ -17,7 +17,7 @@ export default async function Footer() {
   return (
     <footer className="border-t border-ui-border-base w-full">
       <div className="content-container flex flex-col w-full">
-        <div className="flex flex-col gap-y-6 xsmall:flex-row items-start justify-between py-40">
+        <div className="flex flex-col gap-y-6 xsmall:flex-row items-start justify-between py-16">
           <div>
             <LocalizedClientLink
               href="/"
@@ -36,7 +36,7 @@ export default async function Footer() {
                   className="grid grid-cols-1 gap-2"
                   data-testid="footer-categories"
                 >
-                  {productCategories?.slice(0, 6).map((c) => {
+                  {productCategories?.map((c) => {
                     if (c.parent_category) {
                       return
                     }
@@ -64,7 +64,11 @@ export default async function Footer() {
                           {c.name}
                         </LocalizedClientLink>
                         {children && (
-                          <ul className="grid grid-cols-1 ml-3 gap-2">
+                          <ul
+                            className={clx("grid grid-cols-1 ml-3 gap-2", {
+                              "grid-cols-2": children.length > 5,
+                            })}
+                          >
                             {children &&
                               children.map((child) => (
                                 <li key={child.id}>
@@ -96,7 +100,7 @@ export default async function Footer() {
                     }
                   )}
                 >
-                  {collections?.slice(0, 6).map((c) => (
+                  {collections?.map((c) => (
                     <li key={c.id}>
                       <LocalizedClientLink
                         className="hover:text-ui-fg-base"
@@ -148,9 +152,10 @@ export default async function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex w-full mb-16 justify-between text-ui-fg-muted">
+        <div className="flex w-full mb-16 flex-col items-center justify-center text-ui-fg-muted gap-y-2">
           <Text className="txt-compact-small">
-            © {new Date().getFullYear()} ArgusTech. Todos os direitos
+            © {new Date().getFullYear()} Argus
+            <span className="text-blue-600">Tech</span>. Todos os direitos
             reservados.
           </Text>
           <MedusaCTA />

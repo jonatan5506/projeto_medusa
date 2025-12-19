@@ -1,18 +1,19 @@
 import { Text } from "@medusajs/ui"
 
 import Medusa from "../../../common/icons/medusa"
-import NextJs from "../../../common/icons/nextjs"
+//futuro icone da ArgusTech
 
 const MedusaCTA = () => {
   return (
     <Text className="flex gap-x-2 txt-compact-small-plus items-center">
-      Powered by
-      <a href="https://www.medusajs.com" target="_blank" rel="noreferrer">
+      <span className="text-ui-fg-subtle">Desenvolvido por</span>
+      <a
+        href="https://www.medusajs.com"
+        target="_blank"
+        rel="noreferrer"
+        className="transition-transform hover:scale-110"
+      >
         <Medusa fill="#9ca3af" className="fill-[#9ca3af]" />
-      </a>
-      &
-      <a href="https://nextjs.org" target="_blank" rel="noreferrer">
-        <NextJs fill="#9ca3af" />
       </a>
     </Text>
   )
