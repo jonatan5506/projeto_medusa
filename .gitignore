@@ -1,0 +1,15 @@
+# Pastas de dependências
+node_modules/
+**/node_modules/
+
+# Arquivos de variáveis de ambiente (Segurança)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs e arquivos de sistema
+npm-debug.log*
+yarn-error.log*
+.DS_Store
